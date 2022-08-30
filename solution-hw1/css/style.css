@@ -41,12 +41,39 @@ body {
     
   }
 
+  .pics2 {
+
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    font-family: sans-serif;
+    border:5px solid black;
+    
+  }
+
   figcaption {
     background-color: white;
     color: black;
     padding: 2px;
-    text-align: center;
     font-size: 18px;
+    width: 200px;
+  }
+
+  figure.item {
+    /* To correctly align image, regardless of content height: */
+    vertical-align: top;
+    display: inline-block;
+    /* To horizontally center images and caption */
+    
+    /* The width of the container also implies margin around the images. */
+
+    
+}
+
+  .caption {
+    /* Make the caption a block so it occupies its own line. */
+    display: block;
+    text-align: center;
   }
 
   .prod-title {
