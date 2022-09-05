@@ -9,7 +9,7 @@ body {
   .prod-gallery {
 
     box-sizing: border-box;
-    width: 600px; 
+    width: 800px; 
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -23,16 +23,14 @@ body {
     /* We want our image to fit into a 70x70 px square. */
     width: 200px;
     height: 200px;
-    margin: 20px;
+    margin: 10px;
     text-align: left;  
-    /* Add some rounded corners to the image. */
-    border-radius: 5px;
   }
 
   .pics {
 
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     margin: 20px;
     font-family: sans-serif;
     border:5px solid black;
@@ -40,7 +38,6 @@ body {
   }
 
   .pics2 {
-
     width: 400px;
     height: 400px;
     /*margin: 20px;*/
@@ -51,10 +48,26 @@ body {
     
   }
 
+  .pics3 {
+    width: 150px;
+    height: 150px;
+    margin: 20px
+    margin-right: auto;
+    margin-left: auto;
+    font-family: sans-serif;
+    border:5px solid black;
+    
+  }
+
+  .try
+  {
+    text-align: left;
+  }
+
   figcaption {
-    background-color: white;
+    
     color: black;
-    padding: 40px;
+    padding: 20px;
     font-size: 18px;
     width: 210px;
     text-align: center;
@@ -70,11 +83,6 @@ body {
     /* To horizontally center images and caption */
 }
 
-  .caption {
-    /* Make the caption a block so it occupies its own line. */
-    
-    text-align: center;
-  } 
 
   .prod-title {
 
@@ -85,7 +93,7 @@ body {
     margin-left: auto;
     margin-right: auto;
   
-    padding: 20px;
+    padding: 1px;
    
     margin-bottom: 10px;
   
@@ -94,7 +102,6 @@ body {
     text-align: center;
     color: black;
   }
-  
   
 
   
@@ -121,7 +128,7 @@ body {
 
   #staticbox{
     background-color: yellow;
-    border:2px solid black;
+    border:3px solid black;
     
     
   }
