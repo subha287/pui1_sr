@@ -33,9 +33,10 @@ body {
     height: 180px;
     margin: 20px;
     font-family: sans-serif;
-    border:5px solid black;
-    
+    border:5px solid black;    
   }
+
+  .pics:hover {background-color: yellow;}
 
   .pics2 {
     width: 400px;
@@ -104,7 +105,9 @@ body {
   }
   
 
-  
+  a{
+    display: block;
+  }
   a:hover {
     color: black;
     background-color: yellow
