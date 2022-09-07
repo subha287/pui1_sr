@@ -1,127 +1,114 @@
 body {
-   
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-    color: black;
-    background-color: white;
-  }
-
-  .prod-title {
-
-    /* box-sizing: border-box; */
-    width: 350px;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 25px;
-    font-weight: 500;
-    text-align: center;
-    color: black;
-  }
-
-  .for-logo {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  
-  }
-
-  .two-pages{
-    text-align: center;
-    font-size: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 110px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: black;
+  background-color: white;
 }
-
+.prod-title {
+ /* general styling for whole page */
+  width: 350px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+  color: black;
+}
+.for-logo {
+ /* styling to align logo on the left of the bar*/
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.two-pages{
+  text-align: center;
+ /* to style the products and cart pages' hyperlink */
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 110px;
+}
 .for-highlight {
+ /*to enable right highlight of the words product and cart */
   width : 220px;
   margin-left: auto;
   margin-right: auto;
 }
-  
 .logo-thumbnail {
-    width: 200px;
-    height: 200px;
-    margin: 10px;
-    text-align: left;  
-  }
-
-  .pics {
-
-    width: 200px;
-    height: 200px;
-    margin: 20px;
-    font-family: sans-serif;
-    border:5px solid black; 
-    margin-right: auto;
-    margin-left: auto;   
-  }
-
-  .pics2 {
-    width: 300px;
-    height:300px;
-    font-family: sans-serif;
-    border:5px solid black;
-    
-  }
-
-  .pics3 {
-    width: 150px;
-    height: 150px;
-    margin: 20px
-    margin-right: auto;
-    margin-left: auto;
-    font-family: sans-serif;
-    border:5px solid black;
-  }
-
-  .try
-  {
-    text-align: left; 
-  }
-
-  figcaption {
-    color: black;
-    font-size: 18px;
-    width: 210px;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  figure {
-    vertical-align: top;
-    display: inline-block;
+ /* sizing the logo */
+  width: 200px;
+  height: 200px;
+  margin: 10px;
 }
-
-
-  a{
-    display: block;
-  }
-  
-  a:hover {
-    color: black;
-    background-color: yellow;
-    font-weight: 700;
-  }
-
-  a:active {
-    color: black; 
-    text-decoration: none;
-  }
-
-  a:visited {
-    color: black;
-    text-decoration: none;
-  }
-
-  a:link {
-    color: black;
-    text-decoration: none;
-  }
-
-  #staticbox{
-    background-color: yellow;
-    border:3px solid black;     
-  }
+.pics {
+ /* styling the pictures used in index page or home page */
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  font-family: sans-serif;
+  border:5px solid black;
+  margin-right: auto;
+  margin-left: auto;
+}
+.pics2 {
+ /* styling the picture used in the 'details' page */
+  width: 300px;
+  height:300px;
+  font-family: sans-serif;
+  border:5px solid black;
+}
+.pics3 {
+ /* styling pics used in the cart */
+  width: 150px;
+  height: 150px;
+  margin: 20px margin-right: auto;
+  margin-left: auto;
+  font-family: sans-serif;
+  border:5px solid black;
+}
+.try 
+/* patch to align figcaption to the left only on the index page */
+{
+  text-align: left;
+}
+figcaption {
+ /* styling image captions */
+  color: black;
+  font-size: 18px;
+  width: 210px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+figure {
+ /* making the pictures used as a block to wrap around the caption */
+  vertical-align: top;
+  display: inline-block;
+}
+a{
+  display: block;
+}
+a:hover {
+ /* styling for the hyperlinks not to change colour once clicked or have an underline */
+  color: black;
+  background-color: yellow;
+  font-weight: 700;
+}
+a:active {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+a:link {
+  color: black;
+  text-decoration: none;
+}
+#staticbox{
+ /* for yellow box used in cart page */
+  background-color: yellow;
+  border:3px solid black;
+}
