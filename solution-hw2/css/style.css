@@ -57,6 +57,14 @@ margin-left: 510px;
   padding: 25px
 }
 
+.cart2{ 
+  display: flex;
+  padding: 25px;
+  font-size: 21px;
+  font-weight: bolder;
+
+}
+
 .cartcaption{
   padding: 20px;
   flex-grow: 2;
@@ -76,8 +84,27 @@ margin-left: 510px;
   flex-grow: 2;
 }
 
+.detailbox{
+width: 800px;
+height: 1200px;
+margin-left: 210px;
+display: flex;
+
+}
+
+.detailtext{
+  margin-top: 60px;
+  font-size: 30px;
+  width: 500px;
+  margin-left: 60px;
+}
 
 
+#menu{
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  width: 250px;
+}
 
 .for-highlight {
  /*to enable right highlight of the words product and cart */
@@ -126,8 +153,8 @@ hr {
 }
 .pics2 {
  /* styling the picture used in the 'details' page */
-  width: 300px;
-  height:300px;
+  width: 700px;
+  height:700px;
   font-family: sans-serif;
   border:5px solid black;
 }
@@ -191,3 +218,14 @@ a:link {
   text-align:center;
   margin-left: 620px;
 }
+
+
+#staticbox2{
+  /* for yellow box used in cart page */
+   background-color: yellow;
+   border:3px solid black;
+   width: 120px;
+   height: 40px;
+   text-align:center;
+   margin-left: 70px;
+ }

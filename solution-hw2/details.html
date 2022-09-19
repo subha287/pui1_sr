@@ -2,40 +2,52 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Product Gallery</title>    <!-- giving the page a title -->
+        <title>Product Gallery</title>
 <!-- linking the stylesheet -->
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style.css" /> 
     </head>
 
     <body>
-        <div class="prod-title">   
-            Product Gallery
-        </div>
 
-        <div class="for-logo">
-            <hr />
+<!-- using container for logo to style it seperately -->
+    <div class ="topflex">
+
+
             <img class="logo-thumbnail" src="assets/logo-01.svg" />
-            <hr />
-        </div>
 
+<!-- using container for 'products' and 'cart' to style it seperately -->
         <div class="two-pages">
-            <a href="./index.html"> PRODUCTS </a><br />
+           <div class="toptwo">
+            <div class = "menu1">
+            <a href="./index.html"> PRODUCTS </a>
+            </div>
+            <div class = "menu2">
             <a href="./cart.html">CART</a>
+            </div>
+           </div>
+
+           <div class="theline">
+            <hr>
+           </div>
+           <div class="prod-title">
+            Original cinnamon roll
         </div>
 
-        <div class="prod-title">
-            Original Cinnamon Roll <br />
-            <br />
+           
+        </div> 
+    </div>
 
-            <figure>
-                <img class="pics2" src="assets/original-cinnamon-roll.jpeg" /> <br />  <!-- using a container class to style the image used here sperately -->
-                <figcaption>
-                    Customize our delicious cinnamon rolls to your liking! <br />
+    <div class="detailbox">
+        <img class="pics2" src="assets/original-cinnamon-roll.jpeg" /> 
+
+        <div class="detailtext">
+
+            Customize our delicious cinnamon rolls to your liking! <br />
                     <br />
                     <br />
 
                     <form>
-                        <label for="menu">Glazing:</label> <br /> <!-- adding list elements to the drop down -->
+                        <label for="menu">Glazing:</label> <br> <!-- adding list elements to the drop down -->
                         <select name="menu" id="menu">
                             <option value="aa">Keep original</option>
                             <option value="bb">Sugar Milk</option>
@@ -57,16 +69,28 @@
                         <br />
                         <br />
                     </form>
-                    <br />
-                    $2.49
-                    <br />
-                    <br />
+                    <br><br><br>
+                    <div class="cart2">
+                        $2.49
+                        <div id="staticbox2">
+                            Add to Cart!
+                        </div>
 
-                    <div id="staticbox">   <!-- adding a static yellow box for add to cart -->
-                        Add to Cart
                     </div>
-                </figcaption>
-            </figure>
-        </div>
+                   
+
+        
+
+
+
+
+    </div>
+
+
+
+
+
+
+
     </body>
 </html>
