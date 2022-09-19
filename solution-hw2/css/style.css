@@ -3,15 +3,13 @@ body {
   font-size: 20px;
   color: black;
   background-color: white;
+  width: 1300px;
 }
 .prod-title {
  /* general styling for whole page */
   width: 350px;
-  margin-top: 100px;
-
-  font-size: 25px;
-  font-weight: 500;
-  text-align: center;
+  margin-top: 60px;
+  font-size: 27px;
   color: black;
 }
 
@@ -24,23 +22,17 @@ body {
  /* to style the products and cart pages' hyperlink */
   font-size: 20px;
   flex-grow: 1;
-  width: 110px;
+  width: 150px;
   display: flex;
   flex-direction: column;
   align-self: center;
- 
-
 }
 
 .toptwo{
   flex-grow: 1;
   display: flex;
-
 }
 
-.theline{
-
-}
 
 .menu1{
   margin-left: 400px;
@@ -49,14 +41,47 @@ body {
 
 }
 .menu2{
-  
   margin-right: 5px;
+}
+
+
+
+.thecart{
+width: 800px;
+height: 1200px;
+margin-left: 510px;
+}
+
+.cart1{ 
+  display: flex;
+  padding: 25px
+}
+
+.cartcaption{
+  padding: 20px;
+  flex-grow: 2;
+  font-size: 25px;
 
 }
 
+.cartprice{
+  padding: 20px;
+  font-size: 25px;
+}
+
+.carttotal{
+  padding: 20px;
+  font-size: 25px;
+  margin-left: 160px;
+  flex-grow: 2;
+}
+
+
+
+
 .for-highlight {
  /*to enable right highlight of the words product and cart */
-  width : 1500px;
+  width : 1570px;
   display: flex;
   /* justify-content: space-evenly */
   flex-direction: column;
@@ -75,11 +100,20 @@ body {
 
 .logo-thumbnail {
  /* sizing the logo */
-  width: 400px;
+  width: 500px;
   height: 400px;
   margin: 10px;
   flex-grow: 0;
 }
+
+hr {
+  border: none;
+  height: 5px;
+  /* Set the hr color */
+  color: #333; /* old IE */
+  background-color: #333; /* Modern Browsers */
+}
+
 .pics {
  /* styling the pictures used in index page or home page */
   width: 300px;
@@ -101,12 +135,14 @@ body {
  /* styling pics used in the cart */
   width: 150px;
   height: 150px;
-  margin: 20px margin-right: auto;
-  margin-left: auto;
   font-family: sans-serif;
   border:5px solid black;
+  flex-grow: 0;
+
 }
 .try 
+
+
 /* patch to align figcaption to the left only on the index page */
 {
   text-align: left;
@@ -150,4 +186,8 @@ a:link {
  /* for yellow box used in cart page */
   background-color: yellow;
   border:3px solid black;
+  width: 120px;
+  height: 25px;
+  text-align:center;
+  margin-left: 620px;
 }
