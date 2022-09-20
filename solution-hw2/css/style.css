@@ -4,25 +4,29 @@ body {
   color: black;
   background-color: white;
   width: 1200px;
-  /* height: 1130px; */
-  border: 3px;
-  border: 5px solid black;
+  border: 2px solid black;
 }
 .prod-title {
  /* general styling for whole page */
   width: 350px;
-  /* margin-top: 30px; */
   font-size: 27px;
   color: black;
   margin-top: 30px;
 }
-
+.lineedit{
+  margin-left: 300px;
+}
+.addremovetext {
+  margin-left: 23px;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  font-weight: bold;
+  font-size: 18px;
+}
 .topflex {
   display: flex;
 }
-
 .two-pages{
-
  /* to style the products and cart pages' hyperlink */
   font-size: 20px;
   flex-grow: 1;
@@ -31,107 +35,90 @@ body {
   flex-direction: column;
   align-self: center;
 }
-
 .toptwo{
   flex-grow: 1;
   display: flex;
 }
-
-
 .menu1{
   margin-left: 400px;
   margin-right: 100px;
   margin-bottom: 40px;
   margin-left: 500px;
-
 }
 .menu2{
   margin-right: 5px;
 }
-
-
-
 .thecart{
-width: 890px;
-/* height: 1200px; */
-margin-left: 290px;
-margin-bottom: 50px;
+  width: 890px;
+ /* height: 1200px;
+  */
+  margin-left: 290px;
+  margin-bottom: 50px;
 }
-
-.cart1{ 
+.cart1{
   display: flex;
-  padding: 25px
+ /* padding: 25px */
+  margin-left: 20px;
 }
-
-.cart2{ 
+.secondcart1{
+  display: flex;
+ /* padding: 25px */
+  margin-top: 40px;
+  margin-left: 20px;
+}
+.cart2{
   display: flex;
   padding: 25px;
   font-size: 25px;
   font-weight: bolder;
-
 }
-
 .cartcaption{
   padding: 20px;
   flex-grow: 2;
   font-size: 25px;
-
 }
-
 .cartprice{
   padding: 20px;
   font-size: 25px;
 }
-
 .carttotal{
   padding: 20px;
   font-size: 25px;
   margin-left: 160px;
   flex-grow: 2;
 }
-
 .detailbox{
-width: 800px;
-margin-left: 210px;
-display: flex;
-
+  width: 800px;
+  margin-left: 210px;
+  display: flex;
 }
-
 .detailtext{
   margin-top: 60px;
   font-size: 30px;
   width: 500px;
   margin-left: 60px;
 }
-
-
 #menu{
   font-size: 30px;
   font-family: 'Times New Roman', Times, serif;
   width: 250px;
 }
-
 .for-highlight {
  /*to enable right highlight of the words product and cart */
-  /* width : 1560px; */
   display: flex;
-  /* justify-content: space-evenly */
   flex-direction: column;
-
 }
-
 .brow1{
- display: flex;
- justify-content: space-evenly;
- width:1200px;
+  display: flex;
+  justify-content: space-evenly;
+  width:1200px;
+  margin-bottom: 20px;
 }
-
 .brow2{
   display: flex;
   justify-content: space-evenly;
   width:1200px;
- }
-
+}
 .logo-thumbnail {
  /* sizing the logo */
   width: 300px;
@@ -140,27 +127,26 @@ display: flex;
   flex-grow: 0;
   flex-shrink: 0;
 }
-
 hr {
   border: none;
   height: 5px;
-  /* Set the hr color */
-  color: #333; /* old IE */
-  background-color: #333; /* Modern Browsers */
+ /* Set the hr color */
+  color: #333;
+ /* old IE */
+  background-color: #333;
+ /* Modern Browsers */
 }
-
 .pics {
  /* styling the pictures used in index page or home page */
   width: 300px;
   height: 300px;
-  margin: 10px;
+  margin: 8px;
   font-family: sans-serif;
   border:5px solid black;
-  margin-right: auto;
+ /* margin-right: auto;
   margin-left: auto;
+  */
 }
-
-
 .pics2 {
  /* styling the picture used in the 'details' page */
   width: 600px;
@@ -175,9 +161,7 @@ hr {
   font-family: sans-serif;
   border:5px solid black;
   flex-grow: 0;
-
 }
-
 .try 
 /* patch to align figcaption to the left only on the index page */
 {
@@ -185,7 +169,6 @@ hr {
   text-decoration-line: underline;
   text-decoration-thickness: 1px;
 }
-
 figcaption {
  /* styling image captions */
   color: black;
@@ -195,7 +178,6 @@ figcaption {
   margin-right: auto;
   margin-left: auto;
 }
-
 figure {
  /* making the pictures used as a block to wrap around the caption */
   vertical-align: top;
@@ -227,20 +209,19 @@ a:link {
   background-color: yellow;
   border:3px solid black;
   width: 120px;
-  height: 25px;
+  height: 30px;
   text-align:center;
-  margin-left: 620px;
-  padding: 3px;
+  margin-left: 700px;
+  padding: 10px;
+  font-weight: bold;
 }
-
-
 #staticbox2{
-  /* for yellow box used in cart page */
-   background-color: yellow;
-   border:3px solid black;
-   width: 150px;
-   height: 30px;
-   text-align:center;
-   margin-left: 70px;
-   padding: 3px;
- }
+ /* for yellow box used in cart page */
+  background-color: yellow;
+  border:3px solid black;
+  width: 160px;
+  text-align:center;
+  margin-left: 50px;
+  padding: 5px;
+  font-weight: bold;
+}

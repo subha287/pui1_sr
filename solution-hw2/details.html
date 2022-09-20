@@ -1,96 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Product Gallery</title>
-<!-- linking the stylesheet -->
-        <link rel="stylesheet" href="css/style.css" /> 
-    </head>
-
-    <body>
-
-<!-- using container for logo to style it seperately -->
-    <div class ="topflex">
-
-
-            <img class="logo-thumbnail" src="assets/logo-01.svg" />
-
-<!-- using container for 'products' and 'cart' to style it seperately -->
-        <div class="two-pages">
-           <div class="toptwo">
-            <div class = "menu1">
-            <a href="./index.html"> PRODUCTS </a>
+   <head>
+      <meta charset="UTF-8" />
+      <title>Product Gallery</title>
+      <!-- linking the stylesheet -->
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+      <!-- using container for logo to style it seperately -->
+      <div class ="topflex">
+         <img class="logo-thumbnail" src="assets/logo-01.svg" />
+         <!-- using container for 'products' and 'cart' to style it seperately -->
+         <div class="two-pages">
+            <div class="toptwo">
+               <div class = "menu1">
+                  <a href="./index.html"> PRODUCTS </a>
+               </div>
+               <div class = "menu2">
+                  <a href="./cart.html">CART</a>
+               </div>
             </div>
-            <div class = "menu2">
-            <a href="./cart.html">CART</a>
+            <div class="theline">
+               <hr>
             </div>
-           </div>
-
-           <div class="theline">
-            <hr>
-           </div>
-           <div class="prod-title">
-            Original cinnamon roll
-        </div>
-
-           
-        </div> 
-    </div>
-
-    <div class="detailbox">
-        <img class="pics2" src="assets/original-cinnamon-roll.jpeg" /> 
-
-        <div class="detailtext">
-
-            Customize our delicious cinnamon rolls to your liking! <br />
-                    <br />
-                    <br />
-
-                    <form>
-                        <label for="menu">Glazing:</label> <br> <!-- adding list elements to the drop down -->
-                        <select name="menu" id="menu">
-                            <option value="aa">Keep original</option>
-                            <option value="bb">Sugar Milk</option>
-                            <option value="cc">Vanilla milk</option>
-                            <option value="dd">Double Chocolate</option>
-                        </select>
-                        <br />
-                        <br />
-                    </form>
-
-                    <form>
-                        <label for="menu">Pack size:</label> <br />  <!-- adding list elements to the drop down -->
-                        <select name="menu" id="menu">
-                            <option value="aaa">1</option>
-                            <option value="bbb">3</option>
-                            <option value="ccc">6</option>
-                            <option value="ddd">12</option>
-                        </select>
-                        <br />
-                        <br />
-                    </form>
-                    <br><br><br>
-                    <div class="cart2">
-                        $2.49
-                        <div id="staticbox2">
-                            Add to Cart!
-                        </div>
-
-                    </div>
-                   
-
-        
-
-
-
-
-    </div>
-
-
-
-
-
-
-
-    </body>
+            <div class="prod-title">
+               Original cinnamon roll
+            </div>
+         </div>
+      </div>
+      <div class="detailbox">
+      <img class="pics2" src="assets/original-cinnamon-roll.jpeg" /> 
+      <div class="detailtext">
+         Customize our delicious cinnamon rolls to your liking! <br />
+         <br />
+         <br />
+         <form>
+            <label for="menu">Glazing:</label> <br> <!-- adding list elements to the drop down -->
+            <select name="menu" id="menu">
+               <option value="aa">Keep original</option>
+               <option value="bb">Sugar Milk</option>
+               <option value="cc">Vanilla milk</option>
+               <option value="dd">Double Chocolate</option>
+            </select>
+            <br />
+            <br />
+         </form>
+         <form>
+            <label for="menu">Pack size:</label> <br />  <!-- adding list elements to the drop down -->
+            <select name="menu" id="menu">
+               <option value="aaa">1</option>
+               <option value="bbb">3</option>
+               <option value="ccc">6</option>
+               <option value="ddd">12</option>
+            </select>
+            <br />
+            <br />
+         </form>
+         <br><br><br>
+         <div class="cart2">
+            $2.49
+            <div id="staticbox2">
+               Add to Cart
+            </div>
+         </div>
+      </div>
+   </body>
 </html>
