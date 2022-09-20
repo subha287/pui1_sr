@@ -3,12 +3,15 @@ body {
   font-size: 20px;
   color: black;
   background-color: white;
-  width: 1300px;
+  width: 1200px;
+  height: 1200px;
+  border: 3px;
+  border: 5px solid black;
 }
 .prod-title {
  /* general styling for whole page */
   width: 350px;
-  margin-top: 60px;
+  /* margin-top: 30px; */
   font-size: 27px;
   color: black;
 }
@@ -47,9 +50,9 @@ body {
 
 
 .thecart{
-width: 800px;
+width: 890px;
 height: 1200px;
-margin-left: 510px;
+margin-left: 290px;
 }
 
 .cart1{ 
@@ -60,7 +63,7 @@ margin-left: 510px;
 .cart2{ 
   display: flex;
   padding: 25px;
-  font-size: 21px;
+  font-size: 25px;
   font-weight: bolder;
 
 }
@@ -108,7 +111,7 @@ display: flex;
 
 .for-highlight {
  /*to enable right highlight of the words product and cart */
-  width : 1570px;
+  width : 1560px;
   display: flex;
   /* justify-content: space-evenly */
   flex-direction: column;
@@ -118,19 +121,22 @@ display: flex;
 .brow1{
  display: flex;
  justify-content: space-evenly;
+ width:1200px;
 }
 
 .brow2{
   display: flex;
   justify-content: space-evenly;
+  width:1200px;
  }
 
 .logo-thumbnail {
  /* sizing the logo */
-  width: 500px;
-  height: 400px;
+  width: 300px;
+  height: 250px;
   margin: 10px;
   flex-grow: 0;
+  flex-shrink: 0;
 }
 
 hr {
@@ -151,10 +157,12 @@ hr {
   margin-right: auto;
   margin-left: auto;
 }
+
+
 .pics2 {
  /* styling the picture used in the 'details' page */
-  width: 700px;
-  height:700px;
+  width: 600px;
+  height:600px;
   font-family: sans-serif;
   border:5px solid black;
 }
@@ -167,13 +175,13 @@ hr {
   flex-grow: 0;
 
 }
+
 .try 
-
-
 /* patch to align figcaption to the left only on the index page */
 {
   text-align: left;
 }
+
 figcaption {
  /* styling image captions */
   color: black;
@@ -224,7 +232,7 @@ a:link {
   /* for yellow box used in cart page */
    background-color: yellow;
    border:3px solid black;
-   width: 120px;
+   width: 150px;
    height: 40px;
    text-align:center;
    margin-left: 70px;
