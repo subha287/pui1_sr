@@ -6,7 +6,7 @@
     <title>Product Gallery</title>
     <!-- linking the stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
-    <script src="app.js"></script>
+    <script defer src="app.js"></script>
 </head>
 
 <body>
@@ -37,30 +37,21 @@
             Customize our delicious cinnamon rolls to your liking! <br />
             <br />
             <br />
-            <form>
+
                 <label for="menu">Glazing:</label> <br>
                 <!-- adding list elements to the drop down -->
                 <select name="menu" id="glazingOptions" onchange="glazingChange(this)">
-               <option selected="selected" value="keep_original">Keep original</option>
-               <option value="sugar_milk">Sugar Milk</option>
-               <option value="vanilla_milk">Vanilla milk</option>
-               <option value="double_chocolate">Double Chocolate</option>
             </select>
                 <br />
                 <br />
-            </form>
-            <form>
+
                 <label for="menu">Pack size:</label> <br />
                 <!-- adding list elements to the drop down -->
                 <select name="menu" id="pack" onchange="packSizeChange(this)">
-               <option selected="selected" value="1">1</option>
-               <option value="3">3</option>
-               <option value="5">6</option>
-               <option value="10">12</option>
             </select>
                 <br />
                 <br />
-            </form>
+
             <br><br><br>
             <div class="cart2">
                 <div id="price">$2.49</div>
