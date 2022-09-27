@@ -4,7 +4,9 @@ glazingprice_list = {
   vanilla_milk: 0.5,
   double_chocolate: 1.5,
 };
+ 
 
+// first function to change price when glazing option changes, second funtion is for when pack size changes.
 function glazingChange(glazingOption) {
   var value = glazingOption.value;
   pack = document.getElementById("pack").value;
