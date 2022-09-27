@@ -1,4 +1,5 @@
 
+// populating the dropdown options
 
 let allGlazes = [["Keep Original",0], ["Sugar Milk",0], ["Vanilla Milk",0.5], ["Double Chocolate",1.5]];
 
