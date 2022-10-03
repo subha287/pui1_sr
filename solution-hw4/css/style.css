@@ -171,7 +171,6 @@ body {
     /* sizing the logo */
     width: 300px;
     height: 250px;
-    margin: 10px;
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -233,6 +232,14 @@ figcaption {
 a {
     display: block;
 }
+
+
+.logo-thumbnail:hover{
+    background-color: white;
+    
+}
+
+
 
 a:hover {
     /* styling for the hyperlinks not to change colour once clicked or have an underline */
