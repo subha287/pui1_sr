@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>cart</title>
+      <!-- linking the stylesheet -->
+      <link rel="stylesheet" href="css/style.css" />
+      <script src="js/rollsData.js" defer></script>
+      <script defer src="js/cart.js"></script>
+   </head>
+   <body>
+      <!-- using container for logo to style it seperately -->
+      <div class ="topflex">
+         <img class="logo-thumbnail" src="assets/logo-01.svg" />
+         <!-- using container for 'products' and 'cart' to style it seperately -->
+         <div class="two-pages">
+            <div class="toptwo">
+               <div class = "menu1">
+                  <a href="./index.html"> PRODUCTS </a>
+               </div>
+               <div class = "menu2">
+                  <a href="./cart.html">CART</a>
+               </div>
+            </div>
+            <div class="theline">
+               <hr>
+            </div>
+            <div class="prod-title">
+               Shopping Cart
+            </div>
+         </div>
+      </div>
+
+
+      <div class="thecart" id="bill">
+      <template id="cart-template">   
+      <div class="cartItem">
+         <div class="cart1">
+            <img class="pics3" src="assets/original-cinnamon-roll.jpeg" id="image-template">
+            <div class="cartcaption" id="text-template">
+               <div class="roll-type">
+               Original Cinnamon Roll <br />
+               </div>
+               <div class="roll-glazing">
+               Glazing: Keep Original <br />
+               </div>
+               <div class="roll-packsize">
+               Pack Size: 1 <br />
+               </div>
+            </div>
+            <div class="cartprice">
+               $2.49
+            </div>
+         </div>
+         <div class="addremovetext">
+            Remove
+         </div>
+      </div>
+      </template>
+      </div>
+      
+      
+      <hr class="lineedit">
+      <div class="thecart">
+         <div class="cart1">
+            <div class="carttotal">
+               Total
+            </div>
+            <div class="cartprice">
+               $29.94
+            </div>
+         </div>
+         <div id="staticbox">
+            Checkout
+         </div>
+      </div>
+   </body>
+</html>

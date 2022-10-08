@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Product Gallery</title>
+    <!-- linking the stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/rollsData.js" defer></script>
+    <script defer src="js/app.js"></script>
+    
+</head>
+
+<body>
+    <!-- using container for logo to style it seperately -->
+    <div class="topflex">
+        <a href="./index.html">
+            <img class="logo-thumbnail" src="assets/logo-01.svg" id="thelogo"/>
+        </a>
+        <!-- using container for 'products' and 'cart' to style it seperately -->
+        <div class="two-pages">
+            <div class="toptwo">
+                <div class="menu1">
+                    <a href="./index.html"> PRODUCTS </a>
+                </div>
+                <div class="menu2">
+                    <a href="./cart.html">CART</a>
+                </div>
+            </div>
+            <div class="theline">
+                <hr>
+            </div>
+            <div class="prod-titlex">
+                <h3>cinnamon roll</h3> 
+            </div>
+        </div>
+    </div>
+    <div class="detailbox">
+        <img class="pics2" src="" alt="pics of a roll" id="dynamicImg"/>
+        <div class="detailtext">
+            Customize our delicious cinnamon rolls to your liking! <br />
+            <br />
+            <br />
+
+                <label for="menu">Glazing:</label> <br>
+                <!-- adding list elements to the drop down -->
+                <select name="menu" id="glazingOptions" onchange="glazingChange(this)">
+            </select>
+                <br />
+                <br />
+
+                <label for="menu">Pack size:</label> <br />
+                <!-- adding list elements to the drop down -->
+                <select name="menu" id="pack" onchange="packSizeChange(this)">
+            </select>
+                <br />
+                <br />
+
+            <br><br><br>
+            <div class="cart2">
+                <div id="price">$</div>
+
+                <div id="staticbox2", onclick="printOnConsole()">
+                         Add to Cart
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
