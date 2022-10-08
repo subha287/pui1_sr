@@ -1,10 +1,28 @@
 
 // hw5
 
-// new array to store the 4 rolls
 let cart = [];
 
-// creating a class for rolls
+class Pack {
+    name;
+    packPrice;
+    constructor(name, price) {
+        this.name = name;
+        this.packPrice = price;
+    }
+}
+
+const one = new Pack('1', 1);
+const three = new Pack('3', 3);
+const six = new Pack('6', 5);
+const twelve = new Pack('12', 10);
+
+
+let glazeArr = [original, sugarMilk, vanillaMilk, doubleChocolate];
+let packArr = [one, three, six, twelve];
+
+let glazePrice = 0; 
+let packPrice = 1; 
 class Roll {
     constructor(rollType, rollGlazing, packSize, basePrice, calculatedPrice) {
         this.type = rollType;
@@ -15,7 +33,7 @@ class Roll {
     }
 }
 
-// creating a class for glaze information
+
 class Glaze {
     name;
     glazePrice;
@@ -25,34 +43,14 @@ class Glaze {
     }
 }
 
-// storing drop down glaze information
+
 const original = new Glaze('Keep Original', 0.0);
 const sugarMilk = new Glaze('Sugar Milk', 0.0);
 const vanillaMilk = new Glaze('Vanilla Milk', 0.50);
 const doubleChocolate = new Glaze('Double Chocolate', 1.50);
 
-// creating a class for pack information
-class Pack {
-    name;
-    packPrice;
-    constructor(name, price) {
-        this.name = name;
-        this.packPrice = price;
-    }
-}
 
-// storing drop down pack information
-const one = new Pack('1', 1);
-const three = new Pack('3', 3);
-const six = new Pack('6', 5);
-const twelve = new Pack('12', 10);
 
-// saving all of the drop down elements as arrays
-let glazeArr = [original, sugarMilk, vanillaMilk, doubleChocolate];
-let packArr = [one, three, six, twelve];
-
-let glazePrice = 0; // initializing default to 0
-let packPrice = 1;  // multiplying, so making this default value as 1
 
 // compute calculated price for each roll
 function createRoll(rollType, rollGlazing, packSize) {
@@ -102,9 +100,6 @@ function updateTotalPrice() {
 function removeRoll(billItemElement, roll) {
     billItemElement.remove();
     let idx = cart.indexOf(roll);
-    /*  Reference: Removing specific items of array
-        https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array
-    */
     if (idx > -1) { // only splice when roll is found
         cart.splice(idx, 1); // remove roll
     }
