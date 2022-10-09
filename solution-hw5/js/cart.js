@@ -2,7 +2,6 @@
 // hw5
 
 let cart = [];
-
 class Pack {
     name;
     packPrice;
@@ -16,22 +15,6 @@ const one = new Pack('1', 1);
 const three = new Pack('3', 3);
 const six = new Pack('6', 5);
 const twelve = new Pack('12', 10);
-
-
-let glazeArr = [original, sugarMilk, vanillaMilk, doubleChocolate];
-let packArr = [one, three, six, twelve];
-
-let glazePrice = 0; 
-let packPrice = 1; 
-class Roll {
-    constructor(rollType, rollGlazing, packSize, basePrice, calculatedPrice) {
-        this.type = rollType;
-        this.glazing =  rollGlazing;
-        this.size = packSize;
-        this.basePrice = basePrice;
-        this.calculatedPrice = calculatedPrice;
-    }
-}
 
 
 class Glaze {
@@ -48,6 +31,25 @@ const original = new Glaze('Keep Original', 0.0);
 const sugarMilk = new Glaze('Sugar Milk', 0.0);
 const vanillaMilk = new Glaze('Vanilla Milk', 0.50);
 const doubleChocolate = new Glaze('Double Chocolate', 1.50);
+
+
+let glazeArr = [original, sugarMilk, vanillaMilk, doubleChocolate];
+let packArr = [one, three, six, twelve];
+
+let glazePrice = 0; 
+let packPrice = 1; 
+
+
+class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice, calculatedPrice) {
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+        this.calculatedPrice = calculatedPrice;
+    }
+}
+
 
 
 
@@ -90,9 +92,11 @@ function updateTotalPrice() {
     for (i=0; i<cart.length; i++) {
         totalPrice = totalPrice + parseFloat(cart[i].calculatedPrice);
     }
-    const billTotalPriceElement = document.querySelector('.cartprice');
-    billTotalPriceElement.innerText = "$" + totalPrice.toFixed(2);
-    console.log("i'm called!");
+    console.log(totalPrice)
+    const theTotalPrice = document.querySelector('.cartprice22');
+    theTotalPrice.innerText = "$" + totalPrice.toFixed(2);
+    console.log("i'm called!" );
+    console.log(totalPrice);
 }
 
 
@@ -114,8 +118,8 @@ const walnutRoll = createRoll('Walnut', 'Vanilla Milk', '12');
 const raisinRoll = createRoll('Raisin', 'Sugar Milk', '3');
 const appleRoll = createRoll('Apple', 'Original', '3');
 
-// DEBUGGING : updated cart with above rolls
-// console.log(cart);
+
+
 
 // updating template for each roll of cart
 for (i=0; i<cart.length; i++) {
