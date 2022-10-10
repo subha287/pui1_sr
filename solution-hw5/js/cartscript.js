@@ -1,5 +1,5 @@
 
-// hw5
+// hw5 file
 
 let cart = [];
 class Pack {
@@ -33,8 +33,8 @@ const vanillaMilk = new Glaze('Vanilla Milk', 0.50);
 const doubleChocolate = new Glaze('Double Chocolate', 1.50);
 
 
-let glazeArr = [original, sugarMilk, vanillaMilk, doubleChocolate];
-let packArr = [one, three, six, twelve];
+let glazeArray = [original, sugarMilk, vanillaMilk, doubleChocolate];
+let packArray = [one, three, six, twelve];
 
 let glazePrice = 0; 
 let packPrice = 1; 
@@ -52,42 +52,37 @@ class Roll {
 
 
 
-
-
-// compute calculated price for each roll
+// calc price for each roll using glaze and pack info
 function createRoll(rollType, rollGlazing, packSize) {
-    // extracting price for given roll glazing
-    for (i=0; i<glazeArr.length; i++) {
-        if (glazeArr[i].name == rollGlazing) {
-            glazePrice = glazeArr[i].glazePrice;
+
+    for (i=0; i<glazeArray.length; i++) {
+        if (glazeArray[i].name == rollGlazing) {
+            glazePrice = glazeArray[i].glazePrice;
         }
     }
 
-    // extracting price for given roll pack size
-    for (i=0; i<packArr.length; i++) {
-        if (packArr[i].name == packSize) {
-            packPrice = packArr[i].packPrice;
+
+    for (i=0; i<packArray.length; i++) {
+        if (packArray[i].name == packSize) {
+            packPrice = packArray[i].packPrice;
         }
     }
 
-    // extracting base price for roll from the JSON
+    // base price from json's rolls
     let basePrice = rolls[rollType].basePrice;
 
     let calculatedPrice = ((basePrice + glazePrice) * packPrice).toFixed(2);
     console.log(calculatedPrice);
-
-    // create new roll with current selections
+ 
     const newRoll = new Roll(rollType, rollGlazing, packSize, basePrice, calculatedPrice);
 
-    // update cart with this new roll
+    // add roll calculated to cart
     cart.push(newRoll);
-
-    //return roll with price data
     return newRoll;
 }
 
-// update the total price
-function updateTotalPrice() {
+// parse the cart and calculate the total
+function priceUpdateFunc() {
     let totalPrice = 0;
     for (i=0; i<cart.length; i++) {
         totalPrice = totalPrice + parseFloat(cart[i].calculatedPrice);
@@ -100,19 +95,19 @@ function updateTotalPrice() {
 }
 
 
-// function to remove each roll and update price
-function removeRoll(billItemElement, roll) {
-    billItemElement.remove();
-    let idx = cart.indexOf(roll);
-    if (idx > -1) { // only splice when roll is found
-        cart.splice(idx, 1); // remove roll
+//remove the element when button is clicked as well as update the cart 
+function removeRoll(elementToBeDeleted, roll) {
+    elementToBeDeleted.remove();
+    let placeInArray = cart.indexOf(roll);
+    if (placeInArray > -1) { 
+        cart.splice(placeInArray, 1); // at the 'placeInArray' position of cart, remove exactly one element
     }
-    updateTotalPrice();
+    priceUpdateFunc();
 }
 
-//creating the bill
 
-// creating the 4 rolls for initial cart updation
+
+// creating the 4 rolls which will be part of the cart
 const originalRoll =  createRoll('Original', 'Sugar Milk', '1');
 const walnutRoll = createRoll('Walnut', 'Vanilla Milk', '12');
 const raisinRoll = createRoll('Raisin', 'Sugar Milk', '3');
@@ -120,41 +115,39 @@ const appleRoll = createRoll('Apple', 'Original', '3');
 
 
 
-
-// updating template for each roll of cart
+// using template to populate HTML container for each roll in cart
 for (i=0; i<cart.length; i++) {
     const template = document.querySelector('#cart-template');
     const clone = template.content.cloneNode(true);
     let cartObj = clone.querySelector('.cartItem');
+    
+    const buttonRemove = cartObj.querySelector('.addremovetext');
 
-    const btnRemove = cartObj.querySelector('.addremovetext');
+    let roll = cart[i]; 
 
-    let roll = cart[i]; // saving each roll
-
-    /*  used the arrow in eventlistener for parameters, like in the lab example.
-     */
-    btnRemove.addEventListener('click', () => {
+    // used the arrow in eventlistener for parameters, like in the lab example.
+    buttonRemove.addEventListener('click', () => {
         removeRoll(cartObj, roll);
     });
 
-    const billElement = document.querySelector('#bill');
-    billElement.append(cartObj);
+    const masterContainer = document.querySelector('#master');
+    masterContainer.append(cartObj);
 
-    const theRollImage = cartObj.querySelector('.pics3'); //refers to image in HTML
-    let rollImage = rolls[cart[i].type].imageFile; // extracting image name from JSON
+    const theRollImage = cartObj.querySelector('.pics3'); 
+    let rollImage = rolls[cart[i].type].imageFile; 
     theRollImage.src = 'assets/' + rollImage;
 
-    const theRollType = cartObj.querySelector('.roll-type');
+    const theRollType = cartObj.querySelector('.rtype');
     theRollType.innerText = cart[i].type + " Cinnamon Roll";
 
-    const theRollGlazing = cartObj.querySelector('.roll-glazing');
+    const theRollGlazing = cartObj.querySelector('.rglazing');
     theRollGlazing.innerText = "Glazing: " + cart[i].glazing;
 
-    const theRollPacksize = cartObj.querySelector('.roll-packsize');
+    const theRollPacksize = cartObj.querySelector('.rpacksize');
     theRollPacksize.innerText = "Pack size: " + cart[i].size;
 
     const TheRollPrice = cartObj.querySelector('.cartprice');
     TheRollPrice.innerText = "$" + cart[i].calculatedPrice;
 }
-updateTotalPrice();
+priceUpdateFunc();
 
