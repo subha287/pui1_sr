@@ -59,13 +59,9 @@ function createRoll(rollType, rollGlazing, packSize) {
         if (glazeArray[i].name == rollGlazing) {
             glazePrice = glazeArray[i].glazePrice;
         }
-    }
-
-
-    for (i=0; i<packArray.length; i++) {
-        if (packArray[i].name == packSize) {
+            if (packArray[i].name == packSize) {
             packPrice = packArray[i].packPrice;
-        }
+        }     
     }
 
     // base price from json's rolls
@@ -92,7 +88,7 @@ function priceUpdateFunc() {
     const theTotalPrice = document.querySelector('.cartprice22');
     theTotalPrice.innerText = "$" + totalPrice.toFixed(2);
     console.log("i'm called!" ); //debugging
-    console.log(totalPrice);
+    
 }
 
 
@@ -106,14 +102,11 @@ function removeRoll(elementToBeDeleted, roll) {
     priceUpdateFunc();
 }
 
-
-
 // creating the 4 rolls which will be part of the cart
 const originalRoll =  createRoll('Original', 'Sugar Milk', '1');
 const walnutRoll = createRoll('Walnut', 'Vanilla Milk', '12');
 const raisinRoll = createRoll('Raisin', 'Sugar Milk', '3');
 const appleRoll = createRoll('Apple', 'Original', '3');
-
 
 
 // using template to populate HTML container for each roll in cart
@@ -125,6 +118,7 @@ for (i=0; i<cart.length; i++) {
     const buttonRemove = cartObj.querySelector('.addremovetext');
 
     let roll = cart[i]; 
+    
 
     // used the arrow in eventlistener for parameters, like in the lab example.
     buttonRemove.addEventListener('click', () => {
@@ -135,6 +129,7 @@ for (i=0; i<cart.length; i++) {
     const masterContainer = document.querySelector('#master');
     masterContainer.append(cartObj);
 
+    // editing every individual element of the div which is being replicated using template
     const theRollImage = cartObj.querySelector('.pics3'); 
     let rollImage = rolls[cart[i].type].imageFile; 
     theRollImage.src = 'assets/' + rollImage;
@@ -148,8 +143,8 @@ for (i=0; i<cart.length; i++) {
     const theRollPacksize = cartObj.querySelector('.rpacksize');
     theRollPacksize.innerText = "Pack size: " + cart[i].size;
 
-    const TheRollPrice = cartObj.querySelector('.cartprice');
-    TheRollPrice.innerText = "$" + cart[i].calculatedPrice;
+    const theRollPrice = cartObj.querySelector('.cartprice');
+    theRollPrice.innerText = "$" + cart[i].calculatedPrice;
 }
 priceUpdateFunc();
 
