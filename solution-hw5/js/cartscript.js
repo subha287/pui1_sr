@@ -1,7 +1,9 @@
 
-// hw5 file
+// hw5 js file for cart.html
 
 let cart = [];
+ 
+// creating the objects that will hold the glaze and pack pricing details
 class Pack {
     name;
     packPrice;
@@ -36,8 +38,7 @@ const doubleChocolate = new Glaze('Double Chocolate', 1.50);
 let glazeArray = [original, sugarMilk, vanillaMilk, doubleChocolate];
 let packArray = [one, three, six, twelve];
 
-let glazePrice = 0; 
-let packPrice = 1; 
+
 
 
 class Roll {
@@ -51,6 +52,10 @@ class Roll {
 }
 
 
+// variables used in createRoll() func to manipulate and store the calculate price for each roll created
+let glazePrice = 0; 
+let packPrice = 1; 
+
 
 // calc price for each roll using glaze and pack info
 function createRoll(rollType, rollGlazing, packSize) {
@@ -59,7 +64,7 @@ function createRoll(rollType, rollGlazing, packSize) {
         if (glazeArray[i].name == rollGlazing) {
             glazePrice = glazeArray[i].glazePrice;
         }
-            if (packArray[i].name == packSize) {
+        if (packArray[i].name == packSize) {
             packPrice = packArray[i].packPrice;
         }     
     }
@@ -76,6 +81,8 @@ function createRoll(rollType, rollGlazing, packSize) {
     cart.push(newRoll);
     return newRoll;
 }
+
+
 
 // parse the cart and calculate the total
 function priceUpdateFunc() {
@@ -96,11 +103,12 @@ function priceUpdateFunc() {
 function removeRoll(elementToBeDeleted, roll) {
     elementToBeDeleted.remove();
     let placeInArray = cart.indexOf(roll);
-    if (cart.length >= 0)   {  //when the array still has any elements 
-        cart.splice(placeInArray, 1); // at the 'placeInArray' position of cart, remove exactly one element
+    if (cart.length >= 0)   {  //when the array still has atleast one elements 
+        cart.splice(placeInArray, 1); // at the 'placeInArray' position of cart array, remove exactly one element
     }
     priceUpdateFunc();
 }
+
 
 // creating the 4 rolls which will be part of the cart
 const originalRoll =  createRoll('Original', 'Sugar Milk', '1');
@@ -109,7 +117,7 @@ const raisinRoll = createRoll('Raisin', 'Sugar Milk', '3');
 const appleRoll = createRoll('Apple', 'Original', '3');
 
 
-// using template to populate HTML container for each roll in cart
+// using template to populate HTML container for each roll in cart until the cart still has atleast 1 roll
 for (i=0; i<cart.length; i++) {
     const template = document.querySelector('#cart-template');
     const clone = template.content.cloneNode(true);
@@ -118,6 +126,7 @@ for (i=0; i<cart.length; i++) {
     const buttonRemove = cartObj.querySelector('.addremovetext');
 
     let roll = cart[i]; 
+
     
 
     // used the arrow in eventlistener for parameters, like in the lab example.
@@ -125,9 +134,13 @@ for (i=0; i<cart.length; i++) {
         removeRoll(cartObj, roll);
     });
 
+    
     // getting the container which holds the template from html to add the 
     const masterContainer = document.querySelector('#master');
     masterContainer.append(cartObj);
+
+    
+    
 
     // editing every individual element of the div which is being replicated using template
     const theRollImage = cartObj.querySelector('.pics3'); 
