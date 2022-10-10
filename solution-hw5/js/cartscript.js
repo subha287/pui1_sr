@@ -99,16 +99,18 @@ function priceUpdateFunc() {
 }
 
 
-//remove the element when button is clicked as well as update the cart 
-function removeRoll(elementToBeDeleted, roll) {
-    elementToBeDeleted.remove();
+
+function delRoll(elementToBeDeleted, roll) {
+    elementToBeDeleted.remove(); // just remove the element from html
+    
+    // now actuallly delete the roll from the cart in js
     let placeInArray = cart.indexOf(roll);
-    if (cart.length >= 0)   {  //when the array still has atleast one elements 
+    console.log("place in array now is : " + placeInArray); // debug
+    if (cart.length >= 0)   {  //when the cart still has atleast one elements 
         cart.splice(placeInArray, 1); // at the 'placeInArray' position of cart array, remove exactly one element
     }
     priceUpdateFunc();
 }
-
 
 // creating the 4 rolls which will be part of the cart
 const originalRoll =  createRoll('Original', 'Sugar Milk', '1');
@@ -131,7 +133,7 @@ for (i=0; i<cart.length; i++) {
 
     // used the arrow in eventlistener for parameters, like in the lab example.
     buttonRemove.addEventListener('click', () => {
-        removeRoll(cartObj, roll);
+        delRoll(cartObj, roll);
     });
 
     
