@@ -87,10 +87,11 @@ function priceUpdateFunc() {
     for (i=0; i<cart.length; i++) {
         totalPrice = totalPrice + parseFloat(cart[i].calculatedPrice);
     }
-    console.log(totalPrice)
+    console.log(cart.length); //debugging
+    console.log(totalPrice); // debugging 
     const theTotalPrice = document.querySelector('.cartprice22');
     theTotalPrice.innerText = "$" + totalPrice.toFixed(2);
-    console.log("i'm called!" );
+    console.log("i'm called!" ); //debugging
     console.log(totalPrice);
 }
 
@@ -99,7 +100,7 @@ function priceUpdateFunc() {
 function removeRoll(elementToBeDeleted, roll) {
     elementToBeDeleted.remove();
     let placeInArray = cart.indexOf(roll);
-    if (placeInArray > -1) { 
+    if (cart.length >= 0)   {  //when the array still has any elements 
         cart.splice(placeInArray, 1); // at the 'placeInArray' position of cart, remove exactly one element
     }
     priceUpdateFunc();
@@ -119,7 +120,7 @@ const appleRoll = createRoll('Apple', 'Original', '3');
 for (i=0; i<cart.length; i++) {
     const template = document.querySelector('#cart-template');
     const clone = template.content.cloneNode(true);
-    let cartObj = clone.querySelector('.cartItem');
+    let cartObj = clone.querySelector('.cartItem'); //getting the whole div element inside the template
     
     const buttonRemove = cartObj.querySelector('.addremovetext');
 
@@ -130,6 +131,7 @@ for (i=0; i<cart.length; i++) {
         removeRoll(cartObj, roll);
     });
 
+    // getting the container which holds the template from html to add the 
     const masterContainer = document.querySelector('#master');
     masterContainer.append(cartObj);
 
