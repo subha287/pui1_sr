@@ -1,0 +1,12 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+
+
+#flipbook.page {
+    background: wheat;
+
+}
