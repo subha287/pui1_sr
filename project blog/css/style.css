@@ -6,14 +6,85 @@ body {
 
   }
 
+  .pg2img {
+    padding: 20px;
+  }
+
+
+  .the-feed{
+    background-color: rgba(40, 40, 40, 0.5);
+    height: 700px;
+    width: 75%;
+    margin:auto;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .post {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 300px;
+  }
+
+  .postpic {
+    height: 200px;
+    width: 280px;
+    padding-right: 20px;
+  }
+
+  .postcap h1, .postcap p {
+    color: whitesmoke;
+  }
+
+
+  .logo-thumbnail{
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+  }
+
+  .animation {
+    margin-left: 250px;
+  }
+
+  .coverimg{
+    height: 600px;
+    width: 500px;
+  }
+  
+  .start-text h1 {
+    color: whitesmoke;
+    font-family:fantasy;
+    font-size: 40px;
+  }
+
+  .start-text h3 {
+    color: whitesmoke;
+  }
+
+
+  .top-content{
+    background-color: rgba(40, 40, 40, 0.65);
+    height: 200px;
+    margin-bottom: 15px;
+    display: flex;
+   
+  }
+
+  .content {
+    margin: 10px;
+  }
+
   .coverpage {
-    padding: 20000px;
+    background-image: url("coverpage.webp")
 
   }
 
 
   #flipbook .page {
-    background-image: url("bookbg4.webp");
+    background-image: url("bookbg4 copy.png");
+    /* opacity: 0.8; */
     background-color: #cccccc;
     height: 500px;
     background-position: center;
