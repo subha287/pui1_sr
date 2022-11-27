@@ -20,10 +20,12 @@ font-size:medium;
 }
 
 .pg2text {
-  padding: 20px;
-
+  padding: 15px;
 }
 
+.pg2text p {
+  padding-right: 25px;
+}
 
 .the-feed{
   background-color: rgba(40, 40, 40, 0.7);
