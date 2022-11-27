@@ -7,3 +7,4 @@ $('#flipbook').turn({
     duration: 2000
     
     })
+
