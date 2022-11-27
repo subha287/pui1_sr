@@ -22,7 +22,8 @@ body {
     width: 75%;
     margin:auto;
     display: flex;
-    align-items: stretch;
+    justify-content: center;
+
   }
 
   .post {
@@ -52,6 +53,7 @@ body {
   .animation {
     margin-left: 250px;
     margin-right: 250px;
+    align-self: center;
   }
 
   .coverimg{
@@ -80,6 +82,8 @@ body {
 
   .content {
     margin: 10px;
+    display: flex;
+    flex-direction: column;
   }
 
   .coverpage {
