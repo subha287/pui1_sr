@@ -1,8 +1,12 @@
+html{
+  overflow-y: scroll; 
+}
 body {
   background-image: url("abc copy.png");
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   overflow: hidden;
+  /* overflow-y: scroll;  */
 
 }
 
