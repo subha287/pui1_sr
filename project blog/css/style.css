@@ -7,8 +7,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   overflow: hidden;
   /* overflow-y: scroll;  */
-<<<<<<< Updated upstream
-=======
 
 }
 
@@ -19,7 +17,6 @@ body {
 .interpret p {
   color: whitesmoke;
   margin: 5%;
->>>>>>> Stashed changes
 
 }
 
