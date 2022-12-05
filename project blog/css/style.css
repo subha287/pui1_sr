@@ -11,12 +11,13 @@ body {
 }
 
 .interpret {
-  background-color: rgba(40, 40, 40, 0.5);
+  background-color: rgba(40, 40, 40, 0.7);
   margin: 5%;
 }
 .interpret p {
   color: whitesmoke;
   margin: 5%;
+  font-size: larger;
 
 }
 
