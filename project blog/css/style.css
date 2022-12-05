@@ -31,6 +31,17 @@ body {
   position: relative;
 }
 
+.hero-image2 {
+  background-image: url("tagore-1024x672.jpeg");
+  opacity: 0.9;
+  background-color: #cccccc;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
 .hero-text {
   text-align: right;
   position: absolute;
