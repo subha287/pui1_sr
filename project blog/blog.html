@@ -1,113 +1,87 @@
-
 <!DOCTYPE html>
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
       <title>poetryblog</title>
       <!-- linking the stylesheet -->
-<link rel="stylesheet" href="css/style.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script type="text/javascript" src="js/turn.min.js" defer></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script src="js/main.js" defer></script>
-<script src="js/flipbook.js" defer></script>
-
-</head>
-
-
-<body>
-    <div class="topnav" id="myTopnav">  <!-- reponsively collapsible nav bar -->
-        <a href="./index.html">Home</a>
-        <a href="./blog.html">All Posts</a>
-        <a title= " this links to the js code which makes title bar responsive when window is minimized " href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
+      <link rel="stylesheet" href="css/style.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script type="text/javascript" src="js/turn.min.js" defer></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+      <script src="js/main.js" defer></script>
+      <script src="js/flipbook.js" defer></script>
+   </head>
+   <body>
+      <div class="topnav" id="myTopnav">
+         <!-- reponsively collapsible nav bar -->
+         <a href="./index.html">Home</a>
+         <a href="./blog.html">All Posts</a>
+         <a title= " this links to the js code which makes title bar responsive when window is minimized " href="javascript:void(0);" class="icon" onclick="myFunction()">
+         <i class="fa fa-bars"></i>
+         </a>
       </div>
-
-    <div class="content">
-        
-        
-        <div class="top-content">  <!-- div with title and brief description of what this page is -->
+      <div class="content">
+         <div class="top-content">
+            <!-- div with title and brief description of what this page is -->
             <div>
-                <img class="logo-thumbnail" alt="gif of a quill moving on paper" src="assets/quill-gif-2.gif" />
+               <img class="logo-thumbnail" alt="gif of a quill moving on paper" src="assets/quill-gif-2.gif" />
             </div>
-
             <div class="start-text">
-                <h1> Lilt - a poetry interpretation blog </h1>
-                <h3> Check out all my posts here.</h3>
-            </div> 
-
-        </div>
-
-
-
-        <div class="the-feed">  <!-- 3 divs withing this div are the three individual posts all in a flexbox -->
-            
-            
-            <div class="post">  <!-- post 1 which hyperlinks to the individual post page -->
-                <a title="link takes you to the realted blog post's page " href="./postpage1.html">
-                    <div class="postpic">
-                        <img class="postpic" src="assets/emily.jpeg" alt="picture of a paiting portrait of emily">
-                    </div>
-                    <div class="postcap">
-                        <h1> Last Lines, 1643</h1>
-                        <h2> Emily Brontë </h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
-                        <br><h2> Posted on Dec 12, 2022 </h2> <br><br><br>         
-                    </div>
-                </a>
-
+               <h1> Lilt - a poetry interpretation blog </h1>
+               <h3> Check out all my posts here.</h3>
             </div>
-
-
-
+         </div>
+         <div class="the-feed">
+            <!-- 3 divs withing this div are the three individual posts all in a flexbox -->
             <div class="post">
-                <a title="link takes you to the realted blog post's page " href="./postpage2.html"> <!-- post 2 which hyperlinks to the individual post page -->
-                    <div class="postpic">
-                        <img class="postpic" src="assets/tagore-1024x672.jpeg" alt="picture of a paiting portrait of tagore">
-                    </div>
-                    <div class="postcap">
-                        <h1> Authorship, 1945 </h1>
-                        <h2> Rabindranath Tagore </h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
-                        <br><h2> Posted on Dec 5, 2022 </h2> <br><br><br>                      
-                    </div>
-                </a>
+               <!-- post 1 which hyperlinks to the individual post page -->
+               <a title="link takes you to the realted blog post's page " href="./postpage1.html">
+                  <div class="postpic">
+                     <img class="postpic" src="assets/emily.jpeg" alt="picture of a paiting portrait of emily">
+                  </div>
+                  <div class="postcap">
+                     <h1> Last Lines, 1643</h1>
+                     <h2> Emily Brontë </h2>
+                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                     <br>
+                     <h2> Posted on Dec 12, 2022 </h2>
+                     <br><br><br>         
+                  </div>
+               </a>
             </div>
-
-
             <div class="post">
-                <a title="link takes you to the realted blog post's page " href="./postpage3.html"> <!-- post 3 which hyperlinks to the individual post page -->
-                    <div class="postpic">
-                        <img class="postpic" src="assets/yojiro.jpeg" alt="picture of an interpretive paiting portrait of yojiro">
-                    </div>
-                    <div class="postcap">
-                        <h1> Me Me She, 2010 </h1>
-                        <h2> Yojiro Noda </h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                        <br><h2> Posted on Dec 1, 2022 </h2> <br><br><br>
-                    
-                    </div>
-                </a>
-                
+               <a title="link takes you to the realted blog post's page " href="./postpage2.html">
+                  <!-- post 2 which hyperlinks to the individual post page -->
+                  <div class="postpic">
+                     <img class="postpic" src="assets/tagore-1024x672.jpeg" alt="picture of a paiting portrait of tagore">
+                  </div>
+                  <div class="postcap">
+                     <h1> Authorship, 1945 </h1>
+                     <h2> Rabindranath Tagore </h2>
+                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                     <br>
+                     <h2> Posted on Dec 5, 2022 </h2>
+                     <br><br><br>                      
+                  </div>
+               </a>
             </div>
-
-
-        </div>
-
-
-        
-
-
-
-    </div>
-
-
-
-
-
-
-
-
-</body>
+            <div class="post">
+               <a title="link takes you to the realted blog post's page " href="./postpage3.html">
+                  <!-- post 3 which hyperlinks to the individual post page -->
+                  <div class="postpic">
+                     <img class="postpic" src="assets/yojiro.jpeg" alt="picture of an interpretive paiting portrait of yojiro">
+                  </div>
+                  <div class="postcap">
+                     <h1> Me Me She, 2010 </h1>
+                     <h2> Yojiro Noda </h2>
+                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                     <br>
+                     <h2> Posted on Dec 1, 2022 </h2>
+                     <br><br><br>
+                  </div>
+               </a>
+            </div>
+         </div>
+      </div>
+   </body>
 </html>
