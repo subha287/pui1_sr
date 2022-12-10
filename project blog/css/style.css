@@ -1,6 +1,8 @@
 html{
   overflow-y: scroll; 
 }
+
+
 body {
   background-image: url("abc copy.png");
   margin: 0;
@@ -90,13 +92,14 @@ font-size:medium;
   width: 65%;
   margin:auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 
 }
 
 .post {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   padding: 10px;
   width: 300px;
 }
