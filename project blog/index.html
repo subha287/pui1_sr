@@ -4,114 +4,83 @@
       <meta charset="UTF-8" />
       <title>poem</title>
       <!-- linking the stylesheet -->
-<link rel="stylesheet" href="css/style.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script type="text/javascript" src="js/turn.min.js" defer></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script src="js/main.js" defer></script>
-<!-- linking the turn.js library contents -->
-<script src="js/flipbook.js" defer></script> 
-
-</head>
-
-
-<body>
-    <div class="topnav" id="myTopnav">  <!-- div for the collapsible nav bar on top, the js is to mae it responsive for phone screen -->
-        <a href="./index.html">Home</a>
-        <a href="./blog.html">All Posts</a>
-        <a title= " this links to the js code which makes title bar responsive when window is minimized " href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-    </div>
-
-    <div class="content">
-        
-        <div class="top-content"> <!-- the logo and title space's div -->
-            <div>
-                <img class="logo-thumbnail" src="assets/quill-gif-2.gif" alt="A gif of a quill moving on paper" />
+      <link rel="stylesheet" href="css/style.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script type="text/javascript" src="js/turn.min.js" defer></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+      <script src="js/main.js" defer></script>
+      <!-- linking the turn.js library contents -->
+      <script src="js/flipbook.js" defer></script> 
+   </head>
+   <body>
+      <div class="topnav" id="myTopnav">
+         <!-- div for the collapsible nav bar on top, the js is to mae it responsive for phone screen -->
+         <a href="./index.html">Home</a>
+         <a href="./blog.html">All Posts</a>
+         <a title= " this links to the js code which makes title bar responsive when window is minimized " href="javascript:void(0);" class="icon" onclick="myFunction()">
+         <i class="fa fa-bars"></i>
+         </a>
+      </div>
+      <div class="content">
+      <div class="top-content">
+         <!-- the logo and title space's div -->
+         <div>
+            <img class="logo-thumbnail" src="assets/quill-gif-2.gif" alt="A gif of a quill moving on paper" />
+         </div>
+         <div class="start-text">
+            <h1> Lilt - a poetry interpretation blog </h1>
+            <h3> Welcome! Flip through the pages to see some of my recent musings. </h3>
+         </div>
+      </div>
+      <div class="animation">
+         <div id="flipbook" >
+            <!-- div where i create the book animation -->
+            <div id="coverpage" class="fixed hard">
+               <!-- lending a hardboard like quality to the first page flip with class "fixed hard" which uses code from turn.js lib-->
+               <img src="assets/coverpage.webp" class="coverimg" alt="an old piece of parchment">
             </div>
-
-            <div class="start-text">
-                <h1> Lilt - a poetry interpretation blog </h1>
-                <h3> Welcome! Flip through the pages to see some of my recent musings. </h3>
-
+            <div >
+               <img class= "pg2img fixed hard" src="assets/emily.jpeg" alt="portrait painting of emily"> <!-- pattern of the book animation is picture on the left and content on the right with every flip -->
             </div>
-        </div>
-
-
-        <div class="animation">
-            <div id="flipbook" > <!-- div where i create the book animation -->
-
-                <div id="coverpage" class="fixed hard"> <!-- lending a hardboard like quality to the first page flip with class "fixed hard" which uses code from turn.js lib-->
-                    <img src="assets/coverpage.webp" class="coverimg" alt="an old piece of parchment">
-                </div>
-        
-
-                <div >
-                  <img class= "pg2img fixed hard" src="assets/emily.jpeg" alt="portrait painting of emily"> <!-- pattern of the book animation is picture on the left and content on the right with every flip -->
-
-                </div>
-
-        
-                <div class="pg2text own-size"> <!-- each div is a page inside the flipbook div, own-sixe class to set custom dimensions of page  -->
-                    <h1> Who was Emily Brontë? </h1>
-                   
-                    <video id="video1" width="430px" height="220px" controls muted>
-                        <source src="assets/bronte-video.mp4" type="video/mp4"> <!-- embedding a video for more info -->
-                    </video>
-                    <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages </p>
-                    
-                    <h3> Check out my  <a href="./postpage1.html">interpretation of "Last Lines", </a> a Brontë poem. </h3> <!-- hyperlinking the actual related blog post page on my page -->
-                    
-                </div>
-    
-
-                <div class="own-size">
-                    <img class= "pg2img" src="assets/tagore-1024x672.jpeg" alt="painting of tagore in his 80s"> <!-- same pattern on the previous page -->
-
-                </div>
-
-        
-                <div class="pg2text own-size">
-                    <h1> Tagore's India </h1>
-                   
-                    <video id="video1" width="430px" height="220px" controls muted>
-                        <source src="assets/tagore-video.mp4" type="video/mp4">
-                    </video>
-                    <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages </p>
-                    
-                    <h3> Check out my  <a href="./postpage2.html">interpretation of "Authorship", </a> a Tagore poem. </h3> <!-- hyperlinking post page for easy nav  -->
-                   
-                </div>
-    
-
-                <div class="own-size">
-                    <img class= "pg2img" src="assets/yojiro.jpeg" alt="an interpretive painting of yojiro"> <!-- same pattern as previous pages -->
-                </div>
-        
-
-                <div class="pg2text own-size">
-                    <h1> Noda - Sound and Verse </h1>
-                   
-                    <video id="video1" width="430px" height="220px" controls muted>
-                        <source src="assets/yojiro-video.mp4" type="video/mp4">
-                    </video>
-                    <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages </p>
-                    
-                    <h3> Check out my  <a href="./postpage3.html">interpretation of "Me Me She", </a> Yojiro's song. </h3>
-                   
-                </div>
-
-
-                <div class="pg2text own-size">
-                    <h1> flip back, you've reached the end! </h1> <!-- indicating that user has reached the last page of the book explicitly -->
-                </div>
-
-        </div>
-
-    </div>
-
-</body>
+            <div class="pg2text own-size">
+               <!-- each div is a page inside the flipbook div, own-size class used to set custom dimensions of page  -->
+               <h1> Who was Emily Brontë? </h1>
+               <video id="video1" width="430px" height="220px" controls muted>
+                  <source src="assets/bronte-video.mp4" type="video/mp4">
+                  <!-- embedding a video for more info -->
+               </video>
+               <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages </p>
+               <h3> Check out my  <a href="./postpage1.html">interpretation of "Last Lines", </a> a Brontë poem. </h3>
+               <!-- hyperlinking the actual related blog post page on my page -->
+            </div>
+            <div class="own-size">
+               <img class= "pg2img" src="assets/tagore-1024x672.jpeg" alt="painting of tagore in his 80s"> <!-- same pattern on the previous page -->
+            </div>
+            <div class="pg2text own-size">
+               <h1> Tagore's India </h1>
+               <video id="video1" width="430px" height="220px" controls muted>
+                  <source src="assets/tagore-video.mp4" type="video/mp4">
+               </video>
+               <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages </p>
+               <h3> Check out my  <a href="./postpage2.html">interpretation of "Authorship", </a> a Tagore poem. </h3>
+               <!-- hyperlinking post page for easy nav  -->
+            </div>
+            <div class="own-size">
+               <img class= "pg2img" src="assets/yojiro.jpeg" alt="an interpretive painting of yojiro"> <!-- same pattern as previous pages -->
+            </div>
+            <div class="pg2text own-size">
+               <h1> Noda - Sound and Verse </h1>
+               <video id="video1" width="430px" height="220px" controls muted>
+                  <source src="assets/yojiro-video.mp4" type="video/mp4">
+               </video>
+               <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages </p>
+               <h3> Check out my  <a href="./postpage3.html">interpretation of "Me Me She", </a> Yojiro's song. </h3>
+            </div>
+            <div class="pg2text own-size">
+               <h1> flip back, you've reached the end! </h1>
+               <!-- indicating that user has reached the last page of the book explicitly -->
+            </div>
+         </div>
+      </div>
+   </body>
 </html>
-
-
