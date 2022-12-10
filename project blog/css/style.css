@@ -85,7 +85,24 @@ body {
   padding-right: 25px;
 }
 
-/* styling how the blog.html display of posts look like */
+.coverimg{
+  height: 600px;
+  width: 500px;
+}
+.start-text h1 {
+  color: whitesmoke;
+  font-family:fantasy;
+  font-size: 50px;
+}
+.start-text h3 {
+  color: whitesmoke;
+}
+
+.coverpage {
+  background-image: url("css_assets/coverpage.webp") 
+}
+
+/* styling how the blog.html display of posts look like, using a flexbox declaration in the parent container - "the-feed" */
 .the-feed{
   background-color: rgba(40, 40, 40, 0.7);
   height: 60%;
@@ -121,23 +138,15 @@ body {
   height: 150px;
   padding: 20px;
 }
+
+/* centering the book animation */
 .animation {
   margin-left: 250px;
   margin-right: 250px;
   align-self: center;
 }
-.coverimg{
-  height: 600px;
-  width: 500px;
-}
-.start-text h1 {
-  color: whitesmoke;
-  font-family:fantasy;
-  font-size: 50px;
-}
-.start-text h3 {
-  color: whitesmoke;
-}
+
+/* styling the content which remain the same across the pages- the title of blog etc. */
 .top-content{
   background-color: rgba(40, 40, 40, 0.65);
   height: 200px;
@@ -149,13 +158,11 @@ body {
   display: flex;
   flex-direction: column;
 }
-.coverpage {
-  background-image: url("css_assets/coverpage.webp") 
-}
+
+
+/* manipulating the css property values using the classes and IDs which are inherited from the turn.js library. done after referring to the official documentaion of the library */
 #flipbook .page {
   background-image: url("css_assets/bookbg4 copy.png");
- /* opacity: 0.8;
-  */
   background-color: #cccccc;
   height: 500px;
   background-position: center;
@@ -184,6 +191,9 @@ body {
   -o-box-shadow: 0 4px 10px #666;
   box-shadow: 0 4px 10px #666;
 }
+
+
+/* declarations that cause nav bar to collapse into the hamburger menu when it's width is made way too small, thus making it responsive */
 .topnav {
   overflow: hidden;
   background-color: #333;
