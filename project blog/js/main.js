@@ -7,4 +7,5 @@ function myFunction() {
   }
 }
 
+// function to make the nav bar responsive
 

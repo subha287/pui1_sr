@@ -8,3 +8,4 @@ $('#flipbook').turn({
     
     })
 
+// this is the function to manipulate the properties of a "page" in the book function
