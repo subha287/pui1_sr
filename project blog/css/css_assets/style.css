@@ -35,7 +35,7 @@ body {
 }
 
 .hero-image2 {
-  background-image: url("css_assets/tagore-1024x672.jpeg");
+  background-image: url("tagore-1024x672.jpeg");
   opacity: 0.9;
   background-color: #cccccc;
   height: 300px;
@@ -46,7 +46,7 @@ body {
 }
 
 .hero-image3 {
-  background-image: url("css_assets/yojiro.jpeg");
+  background-image: url("yojiro.jpeg");
   opacity: 0.9;
   background-color: #cccccc;
   height: 300px;
@@ -162,13 +162,13 @@ font-size:medium;
 }
 
 .coverpage {
-  background-image: url("css_assets/coverpage.webp")
+  background-image: url("coverpage.webp")
 
 }
 
 
 #flipbook .page {
-  background-image: url("css_assets/bookbg4 copy.png");
+  background-image: url("bookbg4 copy.png");
   /* opacity: 0.8; */
   background-color: #cccccc;
   height: 500px;
